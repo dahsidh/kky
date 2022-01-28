@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuepress-plugin-player | YATING</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="stylesheet" href="/img/logo.ico">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <meta name="description" content="用心写代码，不辜负程序员之名">
+    
+    <link rel="preload" href="/assets/css/0.styles.857c48fb.css" as="style"><link rel="preload" href="/assets/js/app.33cf2620.js" as="script"><link rel="preload" href="/assets/js/11.010e7203.js" as="script"><link rel="preload" href="/assets/js/1.02744f4f.js" as="script"><link rel="preload" href="/assets/js/46.5d3827c1.js" as="script"><link rel="prefetch" href="/assets/js/10.222a2939.js"><link rel="prefetch" href="/assets/js/12.c42ad62c.js"><link rel="prefetch" href="/assets/js/13.8a613e62.js"><link rel="prefetch" href="/assets/js/14.18b13770.js"><link rel="prefetch" href="/assets/js/15.61aef1e2.js"><link rel="prefetch" href="/assets/js/16.4eb8c3d0.js"><link rel="prefetch" href="/assets/js/17.d0c80598.js"><link rel="prefetch" href="/assets/js/18.decb27f1.js"><link rel="prefetch" href="/assets/js/19.be06ad6e.js"><link rel="prefetch" href="/assets/js/20.d4b3f2bb.js"><link rel="prefetch" href="/assets/js/21.80038ab5.js"><link rel="prefetch" href="/assets/js/22.554799ad.js"><link rel="prefetch" href="/assets/js/23.95432f93.js"><link rel="prefetch" href="/assets/js/24.8e41f922.js"><link rel="prefetch" href="/assets/js/25.9894d4c8.js"><link rel="prefetch" href="/assets/js/26.57e25e0f.js"><link rel="prefetch" href="/assets/js/27.d93d772e.js"><link rel="prefetch" href="/assets/js/28.7134267c.js"><link rel="prefetch" href="/assets/js/29.3dc5f91c.js"><link rel="prefetch" href="/assets/js/3.347c23a4.js"><link rel="prefetch" href="/assets/js/30.4663ed78.js"><link rel="prefetch" href="/assets/js/31.937135b3.js"><link rel="prefetch" href="/assets/js/32.9276cd0f.js"><link rel="prefetch" href="/assets/js/33.48d5e398.js"><link rel="prefetch" href="/assets/js/34.fc719210.js"><link rel="prefetch" href="/assets/js/35.1455bf98.js"><link rel="prefetch" href="/assets/js/36.09b53e0b.js"><link rel="prefetch" href="/assets/js/37.f76369fc.js"><link rel="prefetch" href="/assets/js/38.4d84656a.js"><link rel="prefetch" href="/assets/js/39.7ff35dd5.js"><link rel="prefetch" href="/assets/js/4.32e4d406.js"><link rel="prefetch" href="/assets/js/40.f4ecd67b.js"><link rel="prefetch" href="/assets/js/41.63886fd4.js"><link rel="prefetch" href="/assets/js/42.7d83c1b1.js"><link rel="prefetch" href="/assets/js/43.6c5abbd3.js"><link rel="prefetch" href="/assets/js/44.00c697b6.js"><link rel="prefetch" href="/assets/js/45.048fd1f9.js"><link rel="prefetch" href="/assets/js/47.ef533530.js"><link rel="prefetch" href="/assets/js/48.6226d920.js"><link rel="prefetch" href="/assets/js/49.fdcf87c7.js"><link rel="prefetch" href="/assets/js/5.919200c7.js"><link rel="prefetch" href="/assets/js/50.3047c9f6.js"><link rel="prefetch" href="/assets/js/51.8689b0c7.js"><link rel="prefetch" href="/assets/js/52.30c66a9f.js"><link rel="prefetch" href="/assets/js/6.d32b20ca.js"><link rel="prefetch" href="/assets/js/7.a5c52011.js"><link rel="prefetch" href="/assets/js/8.40536ca5.js"><link rel="prefetch" href="/assets/js/9.2c7574ba.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.857c48fb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><div class="loading"><div><div class="loader"></div> <div class="text">正在加载中~</div></div></div> <!----> <div class="bg"></div> <div class="nav-box nav"><div class="nav-name">YATING</div> <div class="search-box"><div class="search-key"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAACwUlEQVRYR+3YX+jNdxzH8ccv2vKn1Jokf1qNJDf+TG4MuZBWW4sxf6L8SVlc4ELSciG7GClJZIXMuJCMxZ2yRKKIUGs0LqWmaLYL/3rP5+R0nHO+n+85P/1Ocm7P6/P6PD/v9+fz/rw/3y4d/uvqcD7vAdvN0Dsdwf6YjGH4GPdxD+fxX7uRq4xvJYKfYS1m4BruJrjB+BSj8Ru24Va7oGUAB+InDMJ6XMDTOgAfYiq24npazINWQXMBIzKnsAU/Z04W3huwGrPTgjKHvpblAH6UzOfjaukZXgFuxgTcKTu+CDD+P4MdOFHWvEr/A77EWDwr41ME+F3aT9+WMW2g/R2/YG8Zr2aA/fAXJqbyUca3nnYcTmI4XuSaNQP8CvOwINcsQ3cO3+NshvZ/STPAPTidVp3rV6RbhyGp9BRpCwFjlctxO8spTzQNq/BNnrx5BP/AmAbFONe/VjcC+zAl16BZiv/EeDzONcvQjUyAn2doC1McZWEFIpLd9YsrMEpXdtlqFsFduFjiastZxEZ8gE054qJTPB0rMSfXLEN3E0twKUNbmOJeCMOZqaXK9Wykm5s6nE+6q1DHRFGkv0aYt/Prixup/v1axqjoLg6vqIc7cayMcY12P6IDL71dcgCj3Yo2fiGutAAZXVBcmwPwqOz4HMDwjHfHkdSJHMycJJ4AuzEKDxFd9azubreqWXqnaypOd7w36rX8UUIm4YvUSR9Pde8Jjia4qIHPMxfZ0sM99tLilLbY/DFZnPihKdL/pv36Y82jKTQBGbAxPgsyN8WNFtwndSeRzgCIbvlyk2dnaA4l3aKcctMuYG6mqnUx52FEpJcVQfYEYOUGq0AubbbKngKsQB7AP+kg1eXsScBqyL+xph5hTwNWQ8ZnlO21kJ0AWIGMD1BvfCLpFMCG5+Q9YCuFsrZotuvxVsd3fIpfAk8Fcimtoa6SAAAAAElFTkSuQmCC" class="img"> <input autofocus="autofocus" placeholder="搜索" value=""></div> <!----></div> </div> <div class="all-box"><div class="content-box"><div class="phone-catalog"><div class="phone-box"><!----> <span></span> <!----></div></div> <div class="content"><div class="catalog-box"><div class="catalog-item-big"><div class="catalog-item"><div class="title">
+                        
+                    </div> <div class="article-time">
+                        
+                    </div></div></div></div> <div class="content__default"><h1 id="vuepress-plugin-player"><a href="#vuepress-plugin-player" class="header-anchor">#</a> vuepress-plugin-player</h1> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>这个vuepress2的一个播放器插件，能够在你网站中播放音乐，目前除了支持本地音乐之外，还支持网易云平台的音乐，你可以播放网易云平台中的歌单，或者是某一首或者几首单曲</p> <blockquote><p>如果你需要播放网易云平台的歌曲，因为有些歌曲是需要会员才能够播放的，所以你如果需要播放某一个歌单(<code>假设此歌单含有100首音乐</code>)或者某几首歌，那么最终可能只能播放20,30,40...首?，因为所有歌曲的链接都是通过请求官方api获取的，所以对于那些需要会员或者付费的歌曲，并不能获取到此歌曲的mp3地址，也就播放不了(<code>但是你可以将这首歌下载到本地，然后使用本地歌曲就可以了</code>)</p></blockquote> <blockquote><p>如果你需要播放网易云歌单中的歌曲，需要登录才能够播放</p></blockquote></div> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> i vuepress-plugin-player
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//docs/.vuepress/config.js</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> path <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;@vuepress/utils&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">//在这里配置插件</span>
+    <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">[</span>
+            <span class="token string">'player'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">//网易云单个歌单id</span>
+                <span class="token literal-property property">songIds</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'29723011'</span><span class="token punctuation">,</span><span class="token string">'1887893189'</span><span class="token punctuation">,</span><span class="token string">'1421069053'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token comment">//网易云歌单</span>
+                <span class="token literal-property property">playlist</span><span class="token operator">:</span> <span class="token string">'2410215112'</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">showPlaylist</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token comment">//是否禁用网易云音乐，如果你选择禁用，那么就将使用本地的歌曲，请传入链接</span>
+                <span class="token literal-property property">disabledNetEaseMusic</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+                <span class="token comment">//请求接口的baseURL</span>
+                <span class="token literal-property property">serverUrl</span><span class="token operator">:</span> <span class="token string">'http://localhost:3000'</span><span class="token punctuation">,</span>
+
+                <span class="token comment">//本地歌曲</span>
+                <span class="token literal-property property">localSongs</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">coverUrl</span><span class="token operator">:</span> <span class="token string">'https://ooszy.cco.vin/img/blog-public/avatar.jpg'</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">songs</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/song/1.mp3'</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">songName</span><span class="token operator">:</span> <span class="token string">'12'</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">cover</span><span class="token operator">:</span> <span class="token string">'https://p1.music.126.net/Rg1x9LeUacIDqtvUzL35Cw==/109951163688517312.jpg'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span>
+                            <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'http://m7.music.126.net/20211120155029/f99e2fe5f557455fd37b7bfd0c0d6c3e/ymusic/545a/005e/025f/c03ab3077e74b9d50e07557d82ca472b.flac'</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">songName</span><span class="token operator">:</span> <span class="token string">'23'</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">cover</span><span class="token operator">:</span> <span class="token string">'https://p2.music.126.net/8mnn6YiQldsRIHe_nER8wg==/109951162894925733.jpg'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span>
+                            <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/song/3.mp3'</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">songName</span><span class="token operator">:</span> <span class="token string">'34'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="参数"><a href="#参数" class="header-anchor">#</a> 参数</h2> <h3 id="songids"><a href="#songids" class="header-anchor">#</a> songIds</h3> <ul><li>Array</li></ul> <blockquote><p>网易云歌曲的id，如</p> <div class="language- extra-class"><pre class="language-text"><code>songIds: ['29723011','1887893189','1421069053']
+</code></pre></div></blockquote> <h3 id="playlist"><a href="#playlist" class="header-anchor">#</a> playlist</h3> <ul><li>String</li></ul> <blockquote><p>网易云歌单id，只有开启播放歌单才有效<code>showPlaylist: true</code></p> <p>如<code>playlist: '2410215112'</code></p></blockquote> <h3 id="showplaylist"><a href="#showplaylist" class="header-anchor">#</a> showPlaylist</h3> <ul><li>Boolean</li></ul> <blockquote><p>是否开启播放的歌曲来源于网易云歌单，使用歌单中的歌曲和<code>songIds</code>配置的单曲，只能二选一，在<a href="#disabledNetEaseMusic">disabledNetEaseMusic</a>开启情况下</p> <p>如<code>showPlaylist: true</code></p></blockquote> <h3 id="disabledneteasemusic"><a href="#disabledneteasemusic" class="header-anchor">#</a> disabledNetEaseMusic</h3> <ul><li>Boolean</li></ul> <blockquote><p>是否禁用网易云</p> <p>如果你禁用，那么就会播放配置的本地歌曲，而不会使用网易云平台的歌曲，推荐使用这个选项，默认是关闭的，也就是使用网易云</p> <p>如<code>disabledNetEaseMusic: true</code></p></blockquote> <h3 id="serverurl"><a href="#serverurl" class="header-anchor">#</a> serverUrl</h3> <ul><li>String</li></ul> <blockquote><p>向网易云请求数据时的接口，默认使用我的，你也可以自己传入你的，详细使用，请看<a href="/plugin/player/serverUrl.html">serverUrl配置</a></p> <p>如<code>serverUrl: 'https://netease-cloud-music-api-teal-psi.vercel.app/'</code></p></blockquote> <h3 id="localsongs"><a href="#localsongs" class="header-anchor">#</a> localSongs</h3> <ul><li>Object</li></ul> <blockquote><p>本地歌曲配置</p></blockquote> <details class="custom-block details"><summary>点击查看配置</summary> <div class="language-json extra-class"><pre class="language-json"><code>localSongs<span class="token operator">:</span> <span class="token punctuation">{</span>
+    coverUrl<span class="token operator">:</span> 'https<span class="token operator">:</span><span class="token comment">//ooszy.cco.vin/img/blog-public/avatar.jpg',</span>
+    songs<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> '/song/<span class="token number">1</span>.mp3'<span class="token punctuation">,</span>
+            songName<span class="token operator">:</span> '<span class="token number">12</span>'<span class="token punctuation">,</span>
+            cover<span class="token operator">:</span> 'https<span class="token operator">:</span><span class="token comment">//p1.music.126.net/Rg1x9LeUacIDqtvUzL35Cw==/109951163688517312.jpg'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> 'http<span class="token operator">:</span><span class="token comment">//m7.music.126.net/20211120155029/f99e2fe5f557455fd37b7bfd0c0d6c3e/ymusic/545a/005e/025f/c03ab3077e74b9d50e07557d82ca472b.flac',</span>
+            songName<span class="token operator">:</span> '<span class="token number">23</span>'<span class="token punctuation">,</span>
+            cover<span class="token operator">:</span> 'https<span class="token operator">:</span><span class="token comment">//p2.music.126.net/8mnn6YiQldsRIHe_nER8wg==/109951162894925733.jpg'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> '/song/<span class="token number">3</span>.mp3'<span class="token punctuation">,</span>
+            songName<span class="token operator">:</span> '<span class="token number">34</span>'
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h3 id="coverurl"><a href="#coverurl" class="header-anchor">#</a> coverUrl</h3> <ul><li>String</li></ul> <blockquote><p>所有的歌曲封面，如果你使用本地歌曲，对于一些歌曲或者你需要配置的本地歌曲很多，你不想单独的为每一首歌曲指定封面图，那么你可以配置此项，当那首歌没有配置封面的时候，就会使用该项配置的图片url作为封面图</p></blockquote> <details class="custom-block details"><summary>点击查看总封面配置</summary> <div class="language-json extra-class"><pre class="language-json"><code>localSongs<span class="token operator">:</span> <span class="token punctuation">{</span>
+    coverUrl<span class="token operator">:</span> 'https<span class="token operator">:</span><span class="token comment">//ooszy.cco.vin/img/blog-public/avatar.jpg',</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <h3 id="songs"><a href="#songs" class="header-anchor">#</a> songs</h3> <ul><li>Array</li></ul> <blockquote><p>本地歌曲集合</p></blockquote> <details class="custom-block details"><summary>点击查看本地歌曲配置</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token literal-property property">songs</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">//放在docs/.vuepress/public/song目录里下的1.mp3文件</span>
+        <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/song/1.mp3'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">songName</span><span class="token operator">:</span> <span class="token string">'12'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">cover</span><span class="token operator">:</span> <span class="token string">'https://p1.music.126.net/Rg1x9LeUacIDqtvUzL35Cw==/109951163688517312.jpg'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">//使用网络上的mp3url</span>
+        <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'http://m7.music.126.net/20211120155029/f99e2fe5f557455fd37b7bfd0c0d6c3e/ymusic/545a/005e/025f/c03ab3077e74b9d50e07557d82ca472b.flac'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">songName</span><span class="token operator">:</span> <span class="token string">'23'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">cover</span><span class="token operator">:</span> <span class="token string">'https://p2.music.126.net/8mnn6YiQldsRIHe_nER8wg==/109951162894925733.jpg'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span><span class="token punctuation">.</span>
+<span class="token punctuation">]</span>
+</code></pre></div></details> <h3 id="path"><a href="#path" class="header-anchor">#</a> path</h3> <ul><li>String</li></ul> <blockquote><p>本地歌曲的路径url，<code>你也可以传入网络中某个mp3的url地址</code>，如果此歌曲你已经下载下来了，那么请放在<code>docs/.vuepress/public</code>静态目录中</p></blockquote> <h3 id="songname"><a href="#songname" class="header-anchor">#</a> songName</h3> <ul><li>String</li></ul> <blockquote><p>歌曲名称</p></blockquote> <h3 id="cover"><a href="#cover" class="header-anchor">#</a> cover</h3> <ul><li>String</li></ul> <blockquote><p>单独为这首歌配置封面图</p></blockquote> <p><a href="/plugin/player/serverUrl.html">点击查看serverUrl配置</a></p></div> <div class="over">
+            完
+            <div class="block"></div></div> <div id="gitalk-container"></div></div> <div class="catalog "><!----> <div class="level1"></div> <a href="#使用" nofollow class="level2">使用</a><a href="#参数" nofollow class="level2">参数</a><a href="#songids" nofollow class="level3">songIds</a><a href="#playlist" nofollow class="level3">playlist</a><a href="#showplaylist" nofollow class="level3">showPlaylist</a><a href="#disabledneteasemusic" nofollow class="level3">disabledNetEaseMusic</a><a href="#serverurl" nofollow class="level3">serverUrl</a><a href="#localsongs" nofollow class="level3">localSongs</a><a href="#coverurl" nofollow class="level3">coverUrl</a><a href="#songs" nofollow class="level3">songs</a><a href="#path" nofollow class="level3">path</a><a href="#songname" nofollow class="level3">songName</a><a href="#cover" nofollow class="level3">cover</a> <!----></div> <!----></div></div> <div class="foot"> 粤ICP备案号：18150247号</div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.33cf2620.js" defer></script><script src="/assets/js/11.010e7203.js" defer></script><script src="/assets/js/1.02744f4f.js" defer></script><script src="/assets/js/46.5d3827c1.js" defer></script>
+  </body>
+</html>
